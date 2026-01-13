@@ -1,0 +1,1230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Home</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-navbar">
+        <div class="container">
+            
+            <a class="navbar-brand" href="#">
+                <img src="logo.svg" alt="Logo" style="height: 40px;"> 
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ALL PRODUCTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">REWARDS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">BLOGS</a>
+                    </li>
+                </ul>
+
+                <form class="d-flex mx-auto search-form">
+                    <div class="input-group">
+                        <span class="input-group-text bg-light border-0"><i class="bi bi-search"></i></span>
+                        <input class="form-control border-0 bg-light" type="search" placeholder="Search products..." aria-label="Search">
+                    </div>
+                </form>
+
+                <div class="d-flex align-items-center nav-icons">
+                    <a href="#" class="nav-link mx-2"><i class="bi bi-heart fs-5"></i></a>
+                    <a href="#" class="nav-link mx-2"><i class="bi bi-person fs-5"></i></a>
+                   <a href="#" class="nav-link ms-2 position-relative" id="open-cart">
+    <i class="bi bi-cart fs-5"></i>
+    <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">0</span>
+</a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<div id="cart-overlay"></div>
+
+<div id="cart-drawer">
+    <div class="cart-header">
+        <h5>My Cart</h5>
+        <button id="close-cart">&times;</button>
+    </div>
+
+    <div id="cart-items"></div>
+
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>Total</span>
+            <strong id="cart-total">₹0</strong>
+        </div>
+        <button class="checkout-btn">Checkout</button>
+    </div>
+</div>
+
+
+
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+
+    <!-- 🔘 Indicators (Dots) -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+    </div>
+
+    <!-- 🖼 Slides -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="Banner 1.jpg" loading="lazy" class="d-block w-100" alt="Slide 1">
+        </div>
+
+        <div class="carousel-item">
+            <img src="Banner 2.jpg" class="d-block w-100" alt="Slide 2">
+        </div>
+
+        <div class="carousel-item">
+            <img src="Banner 3.jpg" class="d-block w-100" alt="Slide 3">
+        </div>
+    </div>
+
+    <!-- ⬅ Previous -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <!-- ➡ Next -->
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+
+</div>
+
+
+
+    <div class="product-slider-container">
+        <h2 style="padding-top: 50px;">Shop Bestsellers</h2>
+          
+        <div class="slider-viewport">
+            <div class="slider-track">
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="1.webp" alt="">
+                                            </div>
+                    <div class="product-info">
+                        <span class="product-category">women</span>
+                        <span class="product-rating">⭐ 4.7</span>
+                    </div>
+                    <h3 class="product-title">Lace Up Placket Blouse | Savana | Bestsellers</h3>
+                    <!-- <p class="product-description">Increase Testosterone & Men Vitality</p> -->
+                    
+                    <!-- <div class="best-for">
+                        <span>Best For:</span>
+                        <div class="tags">
+                            <span>✨ Sperm Count</span>
+                            <span>🛡️ general health</span>
+                        </div>
+                    </div> -->
+                    <div class="price-details">
+                        <span class="save-percent">Save 85%</span>
+                        <span class="old-price">₹1,794</span>
+                        <span class="new-price">₹258</span>
+                    </div>
+                    <button class="add-to-cart-btn"
+    data-id="1"
+    data-name="Lace Up Placket Blouse | Savana | Bestsellers"
+    data-price="258"
+    data-image="1.webp">
+    Add to cart
+</button>
+
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="2.webp" alt="">
+                                            </div>
+                    <div class="product-info">
+                        <span class="product-category">Women</span>
+                        <span class="product-rating">⭐ 4.6</span>
+                    </div>
+                    <h3 class="product-title">Fake 2 PCS Blouse | Savana | Bestsellers</h3>
+                    <!-- <p class="product-description">Clinically proven to increase Collagen, Omega fatty & Zinc</p> -->
+                    
+                    <!-- <div class="best-for">
+                        <span>Best For:</span>
+                        <div class="tags">
+                            <span>☀️ Men Wellness</span>
+                            <span>🌊 Fatiqueness</span>
+                        </div>
+                    </div> -->
+                    
+                    <div class="price-details">
+                        <span class="save-percent">Save 78.5%</span>
+                        <span class="old-price">₹1,249</span>
+                        <span class="new-price">₹269</span>
+                    </div>
+                    <button class="add-to-cart-btn"
+    data-id="2"
+    data-name="Fake 2 PCS Blouse | Savana | Bestsellers"
+    data-price="269"
+    data-image="2.webp">
+    Add to cart
+</button>
+
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="3.webp" alt="">
+                                             </div>
+                    <div class="product-info">
+                        <span class="product-category">Women</span>
+                        <span class="product-rating">⭐ 4.7</span>
+                    </div>
+                    <h3 class="product-title">Ribbon Tank Top | Savana | Bestsellers</h3>
+                    <!-- <p class="product-description">95% saw Energy</p>
+                     -->
+                    <!-- <div class="best-for">
+                        <span>Best For:</span>
+                        <div class="tags">
+                            <span>✨ Daily Life</span>
+                            <span>👵 Energy Booster</span>
+                        </div>
+                    </div> -->
+                    
+                    <div class="price-details">
+                        <span class="save-percent">Save 90%</span>
+                        <span class="old-price">₹2,494</span>
+                        <span class="new-price">₹240</span>
+                    </div>
+                    <button class="add-to-cart-btn"
+    data-id="3"
+    data-name="Ribbon Tank Top | Savana | Bestsellers"
+    data-price="240"
+    data-image="3.webp">
+    Add to cart
+</button>
+
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="4.webp" alt="">
+                                            </div>
+                    <div class="product-info">
+                        <span class="product-category">Women</span>
+                        <span class="product-rating">⭐ 4.6</span>
+                    </div>
+                    <h3 class="product-title">Wrap Tops | Wrap Tops for sale India</h3>
+                    <!-- <p class="product-description">80% users saw firmer, 30% noticed better Results!</p> -->
+                    
+                    <!-- <div class="best-for">
+                        <span>Best For:</span>
+                        <div class="tags">
+                            <span>👵 Gastric</span>
+                            <span>💧 Stomach issues</span>
+                        </div>
+                    </div> -->
+                    
+                    <div class="price-details">
+                        <span class="save-percent">Save 87%</span>
+                        <span class="old-price">₹1,999</span>
+                        <span class="new-price">₹266</span>
+                    </div>
+                    <button class="add-to-cart-btn"
+    data-id="4"
+    data-name="Wrap Tops | Wrap Tops for sale Australia| SHEIN Australia"
+    data-price="266"
+    data-image="4.webp">
+    Add to cart
+</button>
+
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image" >
+                        <img src="Latest 3.webp" alt="" style="width: 100%;">
+                        </div>
+                    <div class="product-info">
+                        <span class="product-category">Women</span>
+                        <span class="product-rating">⭐ 4.5</span>
+                    </div>
+                    <h3 class="product-title">Aidah Turquoise Blue Mulmul Chikankari Straight Kurta</h3>
+                    <!-- <p class="product-description">Reduces hair fall, scalp and promotes new growth.</p> -->
+                    
+                    <!-- <div class="best-for">
+                        <span>Best For:</span>
+                        <div class="tags">
+                            <span>💇 Hair Growth</span>
+                            <span>💪 Stronger Hair</span>
+                        </div>
+                    </div> -->
+                    
+                    <div class="price-details">
+                        <span class="save-percent">Save 87%</span>
+                        <span class="old-price">₹1,500</span>
+                        <span class="new-price">₹200</span>
+                    </div>
+                    <button class="add-to-cart-btn"
+    data-id="5"
+    data-name="Aidah Turquoise Blue Mulmul Chikankari Straight Kurta"
+    data-price="200"
+    data-image="latest 3.webp">
+    Add to cart
+</button>
+
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="6.webp" alt="">
+                        </div>
+                    <div class="product-info">
+                        <span class="product-category">Women</span>
+                        <span class="product-rating">⭐ 4.8</span>
+                    </div>
+                    <h3 class="product-title">Cable Knit Pullover</h3>
+                    <!-- <p class="product-description">Improves gut health and digestion.</p> -->
+                    
+                    <!-- <div class="best-for">
+                        <span>Best For:</span>
+                        <div class="tags">
+                            <span>🌿 Gut Health</span>
+                            <span>🛡️ Immunity</span>
+                        </div>
+                    </div> -->
+                    
+                    <div class="price-details">
+                        <span class="save-percent">Save 65%</span>
+                        <span class="old-price">₹1,000</span>
+                        <span class="new-price">₹350</span>
+                    </div>
+                    <button class="add-to-cart-btn"
+data-id="6"
+data-name="Cable Knit Pullover"
+data-price="350"
+data-image="Cable Knit Pullover">
+
+    Add to cart
+</button>
+
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="7.webp" alt="">
+                        </div>
+                    <div class="product-info">
+                        <span class="product-category">Women</span>
+                        <span class="product-rating">⭐ 4.7</span>
+                    </div>
+                    <h3 class="product-title">Tank Dress</h3>
+                    <!-- <p class="product-description">Helps you fall asleep faster and wake up fresh.</p> -->
+                    
+                    <!-- <div class="best-for">
+                        <span>Best For:</span>
+                        <div class="tags">
+                            <span>😴 Deep Sleep</span>
+                            <span>😌 Stress Relief</span>
+                        </div>
+                    </div> -->
+                    
+                    <div class="price-details">
+                        <span class="save-percent">Save 81%</span>
+                        <span class="old-price">₹700</span>
+                        <span class="new-price">₹130</span>
+                    </div>
+                    <button class="add-to-cart-btn"
+    data-id="7"
+data-name="Tank Dress"
+data-price="130"
+    data-image="7.webp">
+    Add to cart
+</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- <div>
+        <img src="Home 1.jpg" alt="" width="100%" height="auto" style="margin-top: 50px;">
+    </div> -->
+    
+<!-- <button class="slider-btn left" onclick="scrollSlider(-1)">‹</button>
+<button class="slider-btn right" onclick="scrollSlider(1)">›</button> -->
+
+
+<!-- <div class="psycortex-container">
+    <div class="psycortex-tabs">
+        <button class="tab-btn active" onclick="showTab(event, 'children')">Diabetes Care</button>
+        <button class="tab-btn" onclick="showTab(event, 'adolescents')">Men Wellness</button>
+        <button class="tab-btn" onclick="showTab(event, 'adults')">Hair Growth</button>
+    </div>
+
+    <div class="psycortex-content">
+        <div id="children" class="tab-pane active">
+            <div class="pane-grid">
+                <div class="pane-text">
+                    <h2 style="font-family:serif;">Diabetes Care</h2>
+                    <p>We provide specialized and structured care for lifestyle conditions like Type 1 and Type 2 Diabetes, focusing on long-term sugar control and overall well-being.</p>
+                    <ul>
+                        <li>Personalized diabetes management plans</li>
+                        <li>Diet, lifestyle, and daily routine guidance</li>
+                        <li>Continuous monitoring and wellness support</li>
+                    </ul>
+                </div>
+                <div class="pane-image">
+                    <img src="AP 3.jpg" alt="Children Care">
+                </div>
+            </div>
+        </div>
+
+        <div id="adolescents" class="tab-pane">
+            <div class="pane-grid">
+                <div class="pane-text">
+                    <h2 style="font-family:serif;">Men Wellness</h2>
+                    <p>Our Men Wellness Program is designed to support overall male health, helping improve energy levels, strength, and everyday performance.</p>
+                    <ul>
+                        <li>Hormonal balance and vitality support</li>
+                        <li>Stress management and mental well-being</li>
+                        <li>Lifestyle-focused health optimization</li>
+                    </ul>
+                </div>
+                <div class="pane-image">
+                    <img src="AP 2.webp.jpg" alt="Adolescent Support">
+                </div>
+            </div>
+        </div>
+
+        <div id="adults" class="tab-pane">
+            <div class="pane-grid">
+                <div class="pane-text">
+                    <h2 style="font-family:serif;">Hair Growth</h2>
+                    <p>Our Hair Growth & Scalp Care Program offers science-backed and holistic solutions to address hair fall, thinning, and scalp health from the root.</p>
+                    <ul>
+                        <li>Hair fall control and regrowth support</li>
+                        <li>Scalp nourishment and follicle strengthening</li>
+                        <li>Long-term hair health improvement</li>
+                    </ul>
+                </div>
+                <div class="pane-image">
+                    <img src="AP 1.jpg" alt="Adult Counselling">
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div>
+    <img src="Home 2.1.jpg" alt="" width="100%" height="auto">
+</div>
+
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <!-- Brand -->
+        <div class="footer-col">
+            <img src="logo.png" alt="Brand Logo" class="footer-logo">
+            <p>
+                Science-backed wellness solutions for Diabetes Care, Men Wellness
+                and Hair Growth. Designed for long-term health.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+            <h5>Quick Links</h5>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">All Products</a></li>
+                <li><a href="#">Rewards</a></li>
+                <li><a href="#">Blogs</a></li>
+            </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-col">
+            <h5>Support</h5>
+            <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Shipping & Returns</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <!-- Social -->
+        <div class="footer-col">
+            <h5>Connect With Us</h5>
+            <div class="footer-social">
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-youtube"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Sentury. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+
+<style>
+  /* --- Navbar Styling --- */
+
+/* Search bar ko thoda bada karne ke liye */
+.search-form {
+    width: 300px; /* Aap isse change kar sakte hain */
+}
+
+.search-form .form-control:focus {
+    box-shadow: none; /* Focus par blue shadow hatane ke liye */
+    border-color: #ced4da; /* Optional */
+}
+
+/* Icons ka color set karne ke liye */
+.nav-icons a {
+    color: #333; /* Icon color */
+    transition: color 0.2s;
+}
+
+.nav-icons a:hover {
+    color: #000; /* Hover par thoda dark */
+}
+
+.carousel-item {
+    height: 70vh;
+}
+
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Basic Setup */
+body {  
+    font-family: 'Manrope', sans-serif;
+    background-color: #f9f9f9; /* Poore page ka background color */
+    margin: 0;
+    padding: 0px;
+}
+
+.sticky-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #fff;
+}
+
+
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-left: 10px;
+}
+
+/* Slider Container */
+.product-slider-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Yeh 'khidki' hai jisme se track dikhega */
+.slider-viewport {
+    scroll-behavior: smooth;
+    overflow-x: auto; /* Yahi magic hai! Horizontal scroll enable karta hai */
+    overflow-y: hidden;
+    padding: 20px 0;
+    
+    /* Smooth snapping ke liye */
+    scroll-snap-type: x mandatory; 
+    
+    /* Scrollbar ko chhipane ke liye (optional) */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Scrollbar hide (Chrome, Safari, Opera) */
+.slider-viewport::-webkit-scrollbar {
+    display: none;
+}
+
+/* Yeh track hai jispar saare cards hain */
+.slider-track {
+    display: flex;
+    flex-wrap: nowrap; /* Cards ko ek line mein rakhta hai */
+    gap: 16px; /* Cards ke beech ka gap */
+    padding-left: 10px; /* Shuru mein thoda padding */
+}
+
+/* Product Card Styling */
+.product-card {
+    flex: 0 0 auto;
+    width: 280px;
+    background-color: #FFFAF0;
+    border: 1px solid #EAEAEA;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures button stays at bottom */
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    background-color: #f0f0f0; /* Image na hone par placeholder color */
+    border-radius: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* style.css mein yeh add karein */
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Yeh image ko poora fit kar dega bina distort kiye */
+    border-radius: 8px; /* Image ke corners ko round karne ke liye */
+}
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.product-category {
+    font-size: 12px;
+    color: #666;
+    background-color: #F0F0F0;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.product-rating {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.product-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #222;
+    margin: 0 0 8px 0;
+    /* Title ko 2 line tak limit karne ke liye */
+    height: 40px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.product-description {
+    font-size: 13px;
+    color: #555;
+    margin: 0 0 12px 0;
+    height: 32px; /* 2 line ki height */
+    overflow: hidden;
+}
+
+.best-for {
+    margin: auto 0 12px 0; /* Isse yeh hamesha price ke upar rahega */
+    font-size: 12px;
+    color: #777;
+}
+
+.best-for span {
+    font-weight: 600;
+}
+
+.best-for .tags {
+    display: flex;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.best-for .tags span {
+    background: #E6E6E6;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+    color: #333;
+}
+
+.price-details {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.save-percent {
+    font-size: 12px;
+    font-weight: 600;
+    color: #008000; /* Green color */
+    background: #E0F8E0;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.old-price {
+    font-size: 14px;
+    color: #888;
+    text-decoration: line-through;
+}
+
+.new-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Button ko hamesha neeche rakhta hai */
+}
+
+.add-to-cart-btn:hover {
+    background-color: #555;
+}
+
+
+
+@media (max-width: 992px) {
+    .search-form {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .slider-btn {
+        display: none;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 40vh;
+    }
+}
+
+/* --- 📱 Mobile Responsive --- */
+@media (max-width: 768px) {
+    body {
+        padding: 0px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+
+    .product-card {
+        /* Mobile par card ki width 80% taaki agle card ki jhalak dikhe */
+        width: 80%;
+    }
+
+    .slider-track {
+        padding-left: 10px;
+        padding-right: 20px; /* End mein space taaki last card snap ho sake */
+    }
+}
+
+
+.slider-btn {
+    position: absolute;
+    top: 55%; /* Centered relative to cards */
+    transform: translateY(-50%);
+    background: #fff;
+    border: none;
+    font-size: 24px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider-btn.left { left: -10px; }
+.slider-btn.right { right: -10px; }
+
+
+/* Overlay */
+#cart-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    z-index: 998;
+}
+
+/* Drawer */
+#cart-drawer {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 360px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s ease;
+}
+
+#cart-drawer.open {
+    right: 0;
+}
+
+.cart-header {
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-header button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#cart-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+}
+
+.cart-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.cart-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.cart-item h6 {
+    font-size: 14px;
+    margin: 0 0 4px;
+}
+
+.qty-controls {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.qty-controls button {
+    border: 1px solid #ccc;
+    background: #fff;
+    padding: 2px 8px;
+    cursor: pointer;
+}
+
+.cart-footer {
+    padding: 16px;
+    border-top: 1px solid #eee;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 12px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.psycortex-container {
+    background-color: #ffffff; /* Video background color */
+    padding: 80px 40px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.psycortex-tabs {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 50px;
+    gap: 40px;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 15px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #666;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    color: #000;
+}
+
+/* Purple bottom border effect from video */
+.tab-btn.active::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #8b5cf6; 
+}
+
+.tab-pane {
+    display: none;
+    animation: fadeIn 0.6s ease;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.pane-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pane-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    color: #1a1a1a;
+}
+
+.pane-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+.pane-image img {
+    width: 100%;
+    border-radius: 25px; /* Video rounded corners */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+    .pane-grid { grid-template-columns: 1fr; }
+    .psycortex-tabs { flex-wrap: wrap; gap: 20px; }
+}
+
+/* ================= FOOTER ================= */
+
+.site-footer {
+    background-color: #111;
+    color: #ccc;
+    padding: 60px 20px 20px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer-logo {
+    height: 45px;
+    margin-bottom: 15px;
+}
+
+.footer-col h5 {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer-col p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #aaa;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #bbb;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+}
+
+/* Social Icons */
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    width: 40px;
+    height: 40px;
+    background: #222;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.footer-social a:hover {
+    background: #444;
+}
+
+/* Bottom */
+.footer-bottom {
+    border-top: 1px solid #222;
+    margin-top: 40px;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #777;
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
+
+
+</style>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+const cartDrawer = document.getElementById("cart-drawer");
+const cartOverlay = document.getElementById("cart-overlay");
+const cartItemsEl = document.getElementById("cart-items");
+const cartTotalEl = document.getElementById("cart-total");
+const cartCountEl = document.getElementById("cart-count");
+
+// Open / Close
+document.getElementById("open-cart").onclick = (e) => {
+    e.preventDefault();
+    cartDrawer.classList.add("open");
+    cartOverlay.style.display = "block";
+    document.body.style.overflow = "hidden";
+    renderCart();
+};
+
+function closeCart() {
+    cartDrawer.classList.remove("open");
+    cartOverlay.style.display = "none";
+    document.body.style.overflow = "auto";
+}
+
+document.getElementById("close-cart").onclick = closeCart;
+cartOverlay.onclick = closeCart;
+
+// Add to cart
+document.querySelectorAll(".add-to-cart-btn").forEach(btn => {
+    btn.onclick = () => {
+        const { id, name, price, image } = btn.dataset;
+        const existing = cart.find(p => p.id === id);
+
+        if (existing) {
+            existing.qty++;
+        } else {
+            cart.push({ id, name, price: Number(price), image, qty: 1 });
+        }
+
+        saveCart();
+        btn.innerText = "Added ✓";
+        btn.classList.add('btn-success');
+        setTimeout(() => {
+            btn.innerText = "Add to cart";
+            btn.classList.remove('btn-success');
+        }, 1000);
+    };
+});
+
+function renderCart() {
+    if (cart.length === 0) {
+        cartItemsEl.innerHTML = "<p class='text-center mt-5'>Your cart is empty 🛒</p>";
+        cartTotalEl.innerText = "₹0";
+        return;
+    }
+
+    cartItemsEl.innerHTML = "";
+    let total = 0;
+
+    cart.forEach(item => {
+        total += item.price * item.qty;
+        cartItemsEl.innerHTML += `
+            <div class="cart-item border-bottom pb-3 mb-3">
+                <img src="${item.image}" style="width:50px; height:50px; object-fit:cover;">
+                <div class="flex-grow-1">
+                    <h6 class="mb-1">${item.name}</h6>
+                    <div class="qty-controls">
+                        <button class="btn btn-sm btn-outline-secondary" onclick="changeQty('${item.id}', -1)">−</button>
+                        <span class="mx-2">${item.qty}</span>
+                        <button class="btn btn-sm btn-outline-secondary" onclick="changeQty('${item.id}', 1)">+</button>
+                        <button class="btn btn-sm btn-danger ms-auto" onclick="removeItem('${item.id}')">🗑️</button>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+    cartTotalEl.innerText = "₹" + total;
+}
+
+function saveCart() {
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartCount();
+}
+
+function updateCartCount() {
+    const totalQty = cart.reduce((a, b) => a + b.qty, 0);
+    cartCountEl.innerText = totalQty;
+}
+
+function changeQty(id, delta) {
+    const item = cart.find(p => p.id === id);
+    if(item) {
+        item.qty += delta;
+        if (item.qty <= 0) removeItem(id);
+    }
+    saveCart();
+    renderCart();
+}
+
+function removeItem(id) {
+    cart = cart.filter(p => p.id !== id);
+    saveCart();
+    renderCart();
+}
+
+function scrollSlider(dir){
+    document.querySelector('.slider-viewport')
+        .scrollBy({ left: dir * 300, behavior: 'smooth' });
+}
+
+// Initialize count on load
+updateCartCount();
+
+function showTab(event, tabId) {
+    // Sab panels hide karo
+    const panes = document.querySelectorAll('.tab-pane');
+    panes.forEach(p => p.classList.remove('active'));
+
+    // Sab buttons se active status hatao
+    const btns = document.querySelectorAll('.tab-btn');
+    btns.forEach(b => b.classList.remove('active'));
+
+    // Current panel aur button ko active karo
+    document.getElementById(tabId).classList.add('active');
+    event.currentTarget.classList.add('active');
+}
+
+
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
